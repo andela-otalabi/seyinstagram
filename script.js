@@ -6,7 +6,10 @@ $(document).ready(function(){
     $("#getFeed").click(function () {
 
         var user_id = $("#user").val();
-        var apiURL= "https://api.instagram.com/v1/users/search?q="+user_id+"&client_id=e4127deac7f44a658bd362e293ef9f6a&callback=?";     
+        var apiURL= "https://api.instagram.com/v1/users/search?q="+user_id+"&client_id=e4127deac7f44a658bd362e293ef9f6a&callback=?";
+
+        $("#fullname").text("");
+        $("#profile_pic").attr("src", "");     
        
         $.getJSON(apiURL, function(data){
              
